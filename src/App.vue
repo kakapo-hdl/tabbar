@@ -1,16 +1,39 @@
 <template>
-  <div id="app">
-    <tab-bar>
-        <Tab-Bar-Item>
-          <div></div>
+  <div id="app" class="tab-bar-item" >
+    <TabBar>
+        <TabBarItem>
         <template v-slot:item-icon>
                <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
         </template>
         <template v-slot:item-text>
              <div>首页</div>
         </template>
-      </Tab-Bar-Item>
-    </tab-bar>
+      </TabBarItem>
+      <TabBarItem>
+        <template v-slot:item-icon>
+               <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
+        </template>
+        <template v-slot:item-text>
+             <div>首页</div>
+        </template>
+      </TabBarItem>
+      <TabBarItem>
+        <template v-slot:item-icon>
+               <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
+        </template>
+        <template v-slot:item-text>
+             <div>首页</div>
+        </template>
+      </TabBarItem>
+      <TabBarItem>
+        <template v-slot:item-icon>
+               <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
+        </template>
+        <template v-slot:item-text>
+             <div>首页</div>
+        </template>
+      </TabBarItem>
+    </TabBar>
   </div>
 </template>
 
@@ -30,4 +53,10 @@ export default {
  
 <style>
  @import "./assets/css/base.css";
+   .tab-bar-item img {
+      width:24px;
+      height:24px;
+      margin-top: 3px;
+      vertical-align: middle;
+  }
 </style>
