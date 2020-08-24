@@ -6,7 +6,7 @@
                <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
         </template>
         <template v-slot:item-text>
-             <div>首页</div>
+             <div>我的</div>
         </template>
       </TabBarItem>
       <TabBarItem>
@@ -22,7 +22,7 @@
                <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
         </template>
         <template v-slot:item-text>
-             <div>首页</div>
+             <div>菜单</div>
         </template>
       </TabBarItem>
             <TabBarItem>
