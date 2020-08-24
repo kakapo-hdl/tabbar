@@ -25,6 +25,14 @@
              <div>首页</div>
         </template>
       </TabBarItem>
+            <TabBarItem>
+        <template v-slot:item-icon>
+               <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
+        </template>
+        <template v-slot:item-text>
+             <div>首页</div>
+        </template>
+      </TabBarItem>
     </TabBar>
   </div>
 </template>
