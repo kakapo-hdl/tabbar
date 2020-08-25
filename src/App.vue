@@ -1,36 +1,36 @@
 <template>
-  <div id="app" class="tab-bar-item" >
+  <div id="app" >
     <TabBar>
         <TabBarItem>
         <template v-slot:item-icon>
                <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
         </template>
         <template v-slot:item-text>
-             <div>我的</div>
-        </template>
-      </TabBarItem>
-      <TabBarItem>
-        <template v-slot:item-icon>
-               <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
-        </template>
-        <template v-slot:item-text>
              <div>首页</div>
         </template>
       </TabBarItem>
       <TabBarItem>
         <template v-slot:item-icon>
-               <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
+               <img  src="./assets/img/TabBar/menu.svg" alt="">
         </template>
         <template v-slot:item-text>
-             <div>菜单</div>
+             <div>分类</div>
+        </template>
+      </TabBarItem>
+      <TabBarItem>
+        <template v-slot:item-icon>
+               <img  src="./assets/img/TabBar/shop_car.svg" alt="">
+        </template>
+        <template v-slot:item-text>
+             <div>购物车</div>
         </template>
       </TabBarItem>
             <TabBarItem>
         <template v-slot:item-icon>
-               <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
+               <img  src="./assets/img/TabBar/user.svg" alt="">
         </template>
         <template v-slot:item-text>
-             <div>首页</div>
+             <div>我的</div>
         </template>
       </TabBarItem>
     </TabBar>
