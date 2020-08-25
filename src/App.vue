@@ -1,7 +1,7 @@
 <template>
   <div id="app" >
     <TabBar>
-        <TabBarItem>
+        <TabBarItem path="/home">
         <template v-slot:item-icon>
                <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
         </template>

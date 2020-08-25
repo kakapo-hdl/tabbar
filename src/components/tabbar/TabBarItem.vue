@@ -1,5 +1,5 @@
 <template>
-    <div class="tab-bar-item">
+    <div class="tab-bar-item" @click="itemClick">
         <slot name='item-icon'></slot>
         <slot name='item-icon-active'></slot>
         <slot name='item-text'></slot>
@@ -8,8 +8,19 @@
 
 <script>
 export default {
-  name:''
-  
+  name:'TabBarItem',
+  props:{
+    path:String
+  },
+  data(){
+    return{}
+  },
+  methods:{
+    itemClick(){
+      alert(this.path)
+      alert(this.path)
+    }
+  }
 }
 </script>
 <style  scoped>
