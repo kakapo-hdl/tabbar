@@ -1,8 +1,16 @@
 <template>
     <div class="tab-bar-item" @click="itemClick">
-        <slot name='item-icon'></slot>
+      <div v-if="isActive" >
         <slot name='item-icon-active'></slot>
-        <slot name='item-text'></slot>
+          <div :class="{active:isActive}" >
+            <slot name='item-text'></slot>
+        </div>
+      </div>
+      <div v-else >
+        <slot name='item-icon'></slot>
+         <slot name='item-text'></slot>
+      </div>
+       
     </div>
 </template>
 
@@ -13,16 +21,22 @@ export default {
     path:String
   },
   data(){
-    return{}
+    return{
+    }
+  },
+  computed:{
+    isActive(){
+      return this.$route.path.indexOf(this.path)!==-1
+    }
   },
   methods:{
     itemClick(){
-      alert(this.path)
-      alert(this.path)
+      this.$router.replace(this.path)
+      console.log( this.$route.path);
     }
   }
 }
-</script>
+</script>lol
 <style  scoped>
   .tab-bar-item {
     flex: 1;
@@ -35,5 +49,8 @@ export default {
       height:24px;
       margin-top: 3px;
       vertical-align: middle;
+  }
+  .active {
+    color: red;
   }
 </style>

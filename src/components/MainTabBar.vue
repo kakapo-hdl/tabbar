@@ -1,4 +1,4 @@
-<template>
+><template>
   <div id="app" >
     <router-view></router-view>
     <TabBar>
@@ -7,9 +7,9 @@
                <img  src="./assets/img/TabBar/Homeblack.svg" alt="">
         </template>
         <template v-slot:item-icon-active>
-               <img  src="@/assets/img/TabBar/HomeRed.svg" alt="">
+               <img  src="./assets/img/TabBar/HomeRed.svg" alt="">
         </template>
-        <template v-slot:item-t0ext>
+        <template v-slot:item-text>
              <div>首页</div>
         </template>
       </TabBarItem>
@@ -28,7 +28,7 @@
 
       <TabBarItem path="/Shopcar">
        <template v-slot:item-icon>
-               <img  src="@/assets/img/TabBar/shop_car.svg" alt="">
+               <img  src="./assets/img/TabBar/shop_car.svg" alt="">
         </template>       
         <template  v-slot:item-icon-active>
                <img  src="./assets/img/TabBar/shop_car_red.svg" alt="">
