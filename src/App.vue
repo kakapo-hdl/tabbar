@@ -1,5 +1,6 @@
 <template>
   <div id="app" >
+    {{name}}
     <!-- <router-view></router-view> -->
     <MainTabBar></MainTabBar>
   </div>
@@ -7,8 +8,15 @@
 
 <script>
 import MainTabBar from './components/MainTabBar.vue' 
-
+import {useStore} from 'vuex'
 export default {
+  setup(){
+    const store = useStore();
+    const name = store.state.count;
+    return{
+      name
+    }
+  },
   name: 'App',
   components: {
     MainTabBar
