@@ -9,6 +9,8 @@ module.exports = {
         //修改文件引入自定义路径
         config.resolve.alias
             .set('@', resolve('src'))
+            .set('assets',resolve('src/assets'))
+            .set('components',resolve('src/components'))
             // .set('style', resolve('src/assets/style'))
     }
 }
