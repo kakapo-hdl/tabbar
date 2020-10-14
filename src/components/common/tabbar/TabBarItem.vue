@@ -1,14 +1,14 @@
 <template>
     <div class="tab-bar-item" @click="itemClick">
+
       <div v-if="isActive" >
         <slot name='item-icon-active'></slot>
-          <div :class="{active:isActive}" >
-            <slot name='item-text'></slot>
-        </div>
       </div>
       <div v-else >
         <slot name='item-icon'></slot>
-         <slot name='item-text'></slot>
+      </div>
+      <div :style="activeStyle" >
+            <slot name='item-text'></slot>
       </div>
        
     </div>
@@ -27,7 +27,10 @@ export default {
   computed:{
     isActive(){
       return this.$route.path.indexOf(this.path)!==-1
-    }
+    },
+    activeStyle() {
+				return this.isActive ? {'color': 'red'} : {}
+      }
   },
   methods:{
     itemClick(){
