@@ -4,9 +4,9 @@
         <template v-slot:center>购物街</template>
       </NavBar>
       <Swiper>
-        <SwiperItem :v-for="item in banner">
+        <SwiperItem v-for="(item,index) in banners" :key="index">
           <a :href="item.link">
-            <img :src="item.image">
+            <img :src="item.image" alt="">
           </a>
         </SwiperItem>
       </Swiper>
@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      banner: [],
+      banners: [],
       dKeyword:[],
       keywords:[],
       recomment:[],
@@ -37,7 +37,7 @@ export default {
       this.banners = res.data.banner.list
       this.dKeyword = res.data.dKeyword.list
       this.keywords = res.data.keywords.list
-      this.recomment = res.data.recomment.list
+      // this.recomment = res.data.recomment.list
     })
   }
 }
