@@ -3,41 +3,29 @@
       <NavBar class="home-nav">
         <template v-slot:center>购物街</template>
       </NavBar>
-      <Swiper>
-        <SwiperItem v-for="(item,index) in banners" :key="index">
-          <a :href="item.link">
-            <img :src="item.image" alt="">
-          </a>
-        </SwiperItem>
-      </Swiper>
+      <HomeSwiper :banners="banners"></HomeSwiper>
     </div>
 </template>
 
 <script>
 import { getHomeMultidata } from "network/home"
-import { Swiper, SwiperItem} from "components/common/swiper"
+
 import NavBar from 'components/common/navBar/NavBar'
+import HomeSwiper from 'views/home/chidrenHome/HomeSwiper.vue'
 export default {
   name: 'Home',
   components:{
     NavBar,
-    Swiper,
-    SwiperItem
+    HomeSwiper
   },
-  data() {
-    return {
-      banners: [],
-      dKeyword:[],
-      keywords:[],
-      recomment:[],
+  data(){
+    return{
+      banners:[]
     }
   },
   created(){
     getHomeMultidata().then(res => {
       this.banners = res.data.banner.list
-      this.dKeyword = res.data.dKeyword.list
-      this.keywords = res.data.keywords.list
-      // this.recomment = res.data.recomment.list
     })
   }
 }
