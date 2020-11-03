@@ -1,8 +1,0 @@
-body{
-    padding: 0;
-    margin: 0;
-}
-/* 根元素变量 */
-:root{
-    --color-tint:#ff8198;
-}
